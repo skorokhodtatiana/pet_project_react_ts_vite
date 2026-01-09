@@ -1,9 +1,26 @@
+import { FC, useState } from 'react';
+import AddPizzaForm from './components/addPizzaForm/AddPizzaForm';
+import Pizza from './models/Pizza';
+
 import './App.css';
 
-function App() {
+const App: FC = () => {
+	const [pizzasList, setPizzasList] = useState<Pizza[]>([]);
+
+	const addNewPizza = (newPizza: Pizza) => {
+		setPizzasList([...pizzasList,newPizza]);
+	};
+
+	console.log(pizzasList)
+
 	return (
 		<div className="App">
-		New App!{pizza}
+			<div className="wrap">
+				<div className="heading">
+					Наша пиццерия
+					<AddPizzaForm addNewPizza={addNewPizza}></AddPizzaForm>
+				</div>
+			</div>
 		</div>
 	);
 }
