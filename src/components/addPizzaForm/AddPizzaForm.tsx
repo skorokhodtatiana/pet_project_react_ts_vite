@@ -1,6 +1,6 @@
 import { FC, useState, ChangeEvent, FormEvent } from 'react';
 
-import './styles.css';
+import './addPizzaForm.css';
 import Pizza from '../../models/Pizza';
 
 const initialState = {
