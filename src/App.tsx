@@ -1,5 +1,6 @@
 import { FC, useState } from 'react';
 import AddPizzaForm from './components/addPizzaForm/AddPizzaForm';
+import DisplayPizza from './components/displayPizza/DisplayPizza';
 import Pizza from './models/Pizza';
 
 import './App.css';
@@ -20,6 +21,7 @@ const App: FC = () => {
 					Наша пиццерия
 					<AddPizzaForm addNewPizza={addNewPizza}></AddPizzaForm>
 				</div>
+				<DisplayPizza pizzasList={pizzasList}></DisplayPizza>
 			</div>
 		</div>
 	);
