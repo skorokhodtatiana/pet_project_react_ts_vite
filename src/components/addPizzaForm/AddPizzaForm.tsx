@@ -1,17 +1,17 @@
 import { FC, useState, ChangeEvent, FormEvent } from 'react';
 
-import './addPizzaForm.css';
+import './addPizzaForm.scss';
 import Pizza from '../../models/Pizza';
 
 const initialState = {
-		title: '',
-		price: '',
-		img: ''
-	}
+	title: '',
+	price: '',
+	img: ''
+}
 
-	interface addPizzaFormProps {
-		addNewPizza: (newPizza:Pizza) => void
-	};
+interface addPizzaFormProps {
+	addNewPizza: (newPizza:Pizza) => void
+};
 
 const AddPizzaForm: FC<addPizzaFormProps> = ({addNewPizza}) => {
 	const [newPizza, setNewPizza] = useState<{title: string, price: string, img: string}>(initialState);
@@ -43,8 +43,9 @@ const AddPizzaForm: FC<addPizzaFormProps> = ({addNewPizza}) => {
 
 	return (
 		<>
-			<form onSubmit={handleSubmit}>
+			<form className="form" onSubmit={handleSubmit}>
 				<input
+					className="form__input"
 					name="title"
 					type="text"
 					placeholder="Название"
@@ -52,6 +53,7 @@ const AddPizzaForm: FC<addPizzaFormProps> = ({addNewPizza}) => {
 					value={newPizza.title}
 				/>
 				<input
+					className="form__input"
 					name="price"
 					type="text"
 					placeholder="Стоимость"
@@ -59,13 +61,14 @@ const AddPizzaForm: FC<addPizzaFormProps> = ({addNewPizza}) => {
 					value={newPizza.price}
 				/>
 				<input
+					className="form__input"
 					name="img"
 					type="text"
 					placeholder="Изображение"
 					onChange={handleClick}
 					value={newPizza.img}
 				/>
-				<button type="submit">
+				<button className="form__button-submit" type="submit">
 					Добавить в меню
 				</button>
 			</form>

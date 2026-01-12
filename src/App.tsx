@@ -3,7 +3,7 @@ import AddPizzaForm from './components/addPizzaForm/AddPizzaForm';
 import DisplayPizza from './components/displayPizza/DisplayPizza';
 import Pizza from './models/Pizza';
 
-import './App.css';
+import './App.scss';
 
 const App: FC = () => {
 	const [pizzasList, setPizzasList] = useState<Pizza[]>([]);
@@ -15,9 +15,9 @@ const App: FC = () => {
 	console.log(pizzasList)
 
 	return (
-		<div className="App">
-			<div className="wrap">
-				<div className="heading">
+		<div className="container">
+			<div className="container__wrap">
+				<div className="container__heading">
 					Наша пиццерия
 					<AddPizzaForm addNewPizza={addNewPizza}></AddPizzaForm>
 				</div>
