@@ -16,7 +16,7 @@ interface addPizzaFormProps {
 const AddPizzaForm: FC<addPizzaFormProps> = ({addNewPizza}) => {
 	const [newPizza, setNewPizza] = useState<{title: string, price: string, img: string}>(initialState);
 
-	const handleClick = (e:ChangeEvent<HTMLInputElement>) => {
+	const handleChange = (e:ChangeEvent<HTMLInputElement>) => {
 		const {name, value} = e.target;
 		setNewPizza({
 			...newPizza,
@@ -37,7 +37,7 @@ const AddPizzaForm: FC<addPizzaFormProps> = ({addNewPizza}) => {
 				id: Date.now()
 			})
 			setNewPizza(initialState);
-			console.log(newPizza)
+			//console.log(newPizza)
 		}
 	}
 
@@ -49,7 +49,7 @@ const AddPizzaForm: FC<addPizzaFormProps> = ({addNewPizza}) => {
 					name="title"
 					type="text"
 					placeholder="Название"
-					onChange={handleClick}
+					onChange={handleChange}
 					value={newPizza.title}
 				/>
 				<input
@@ -57,7 +57,7 @@ const AddPizzaForm: FC<addPizzaFormProps> = ({addNewPizza}) => {
 					name="price"
 					type="text"
 					placeholder="Стоимость"
-					onChange={handleClick}
+					onChange={handleChange}
 					value={newPizza.price}
 				/>
 				<input
@@ -65,7 +65,7 @@ const AddPizzaForm: FC<addPizzaFormProps> = ({addNewPizza}) => {
 					name="img"
 					type="text"
 					placeholder="Изображение"
-					onChange={handleClick}
+					onChange={handleChange}
 					value={newPizza.img}
 				/>
 				<button className="form__button-submit" type="submit">
