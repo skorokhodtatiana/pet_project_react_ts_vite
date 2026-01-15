@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/demopizza.js","./src/main.tsx","./src/vite-env.d.ts","./src/components/addpizzaform/addpizzaform.tsx","./src/components/displaypizza/displaypizza.tsx","./src/components/editpizzaform/editpizzaform.tsx","./src/components/singlepizza/singlepizza.tsx","./src/models/pizza.ts"],"version":"5.8.3"}

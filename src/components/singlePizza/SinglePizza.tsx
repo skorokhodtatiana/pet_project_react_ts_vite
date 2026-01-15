@@ -26,7 +26,7 @@ const SinglePizza:FC<singlePizzaProps> = ({pizza, updatePizza, deletePizza}) => 
 
 	return (
 		<div className="pizza">
-			<img className="pizza__img" src={`src/assets/images/${pizza.img}`} alt={pizza.img}/>
+			<img className="pizza__img" src={`/images/${pizza.img}`} alt={pizza.img}/>
 			<h2 className="pizza__title">{pizza.title}</h2>
 			<span className="pizza__price">{pizza.price}</span>
 
